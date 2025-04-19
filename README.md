@@ -8,7 +8,7 @@ porém, toda a programação do jogo foi feita na versão mobile do Editor do Go
 
 # Créditos
 
-![image](https://github.com/user-attachments/assets/71ae1b83-7480-4b90-8b8f-c8b1fed4b71f)
+![image](https://github.com/user-attachments/assets/65d0bb4e-4b3f-473d-ae37-f008f5558c68)
 
 - Guará Programador - Programador
 - Kenney- Por disponibilizar os assets da UI e da maioria dos carros e a estrada
