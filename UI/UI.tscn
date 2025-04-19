@@ -344,6 +344,7 @@ layout_mode = 2
 theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 text = "[url=https://kenney.nl/assets/pixel-vehicle-pack]Kenney_pixel_vehicle_pack[/url]
+[url=https://kenney.nl/assets/ui-pack]kenney_ui_pack[/url]
 [url=https://github.com/ruandemeneses]Ruan de meneses[/url]
 G0rdo"
 fit_content = true
