@@ -13,6 +13,7 @@ porém, toda a programação do jogo foi feita na versão mobile do Editor do Go
 - Guará Programador - Programador
 - Kenney- Por disponibilizar os assets da UI e da maioria dos carros e a estrada
 - Gordo - Por fazer os sprites dos carros feitos pelos inscritos (ainda a ser adicionado)
+- Marco Fazio - Por disponibilizar o [Virtual joystick plugin](https://github.com/MarcoFazioRandom/Virtual-Joystick-Godot)
 - [Ruan de meneses](https://github.com/ruandemeneses) - Por fazer o sprite do carro do ovo :)
 
 # Licença
