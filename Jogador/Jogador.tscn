@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfytumxxcomn6"]
+
+[ext_resource type="Script" uid="uid://c7ihn0vidgr88" path="res://Jogador/jogador.gd" id="1_yue8j"]
+[ext_resource type="Texture2D" uid="uid://bfm3iaw7bcv5j" path="res://Assets/kenney_pixel-vehicle-pack/PNG/Cars/sedan.png" id="2_wrkpn"]
+[ext_resource type="PackedScene" uid="uid://1vox1ndu1bma" path="res://Jogador/ColisaoInimigo.tscn" id="3_wrkpn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vk3iq"]
+size = Vector2(121.5, 65)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_yue8j")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.500003, -5)
+scale = Vector2(4.24138, 4.76923)
+texture = ExtResource("2_wrkpn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.25, -4.5)
+shape = SubResource("RectangleShape2D_vk3iq")
+
+[node name="ColisaoInimigo" parent="." instance=ExtResource("3_wrkpn")]
+position = Vector2(4, -8)
+collision_layer = 0
+collision_mask = 2
+
+[connection signal="body_entered" from="ColisaoInimigo" to="." method="_on_colisao_inimigo_body_entered"]

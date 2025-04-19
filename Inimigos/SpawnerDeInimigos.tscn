@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxpifb78frtm4"]
+
+[ext_resource type="Script" uid="uid://bq1r850nlxsqt" path="res://Inimigos/SpawnerDeInimigos.gd" id="1_aqrhf"]
+[ext_resource type="PackedScene" uid="uid://bel1nvricq4vi" path="res://Inimigos/Carros/CarroInimigo.tscn" id="2_fxokr"]
+[ext_resource type="PackedScene" uid="uid://dfif7rb2a6rnv" path="res://Inimigos/Carros/Ambulancia.tscn" id="3_kxn4k"]
+[ext_resource type="PackedScene" uid="uid://dncdiar2ol75w" path="res://Inimigos/Carros/CarroVerde.tscn" id="4_i62dy"]
+
+[node name="SpawnerDeInimigos" type="Node2D"]
+script = ExtResource("1_aqrhf")
+possiveis_inimigos = Array[PackedScene]([ExtResource("3_kxn4k"), ExtResource("2_fxokr"), ExtResource("4_i62dy")])
+possibilidades_inimigos = Array[float]([0.05, 0.45, 0.95])
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

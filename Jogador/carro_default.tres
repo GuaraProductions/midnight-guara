@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Carro" load_steps=3 format=3 uid="uid://bju1is8yyyepj"]
+
+[ext_resource type="Script" uid="uid://bv7ai3b7w1jwx" path="res://Jogador/Carro.gd" id="1_3rjf4"]
+[ext_resource type="Texture2D" uid="uid://2pu7utouinbb" path="res://Assets/kenney_pixel-vehicle-pack/PNG/Cars/sports_red.png" id="2_x85rp"]
+
+[resource]
+script = ExtResource("1_3rjf4")
+nome = "Carro Vermelho "
+velocidade = 500.0
+rigidez = 0.97
+textura = ExtResource("2_x85rp")
+metadata/_custom_type_script = "uid://bv7ai3b7w1jwx"

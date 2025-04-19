@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfif7rb2a6rnv"]
+
+[ext_resource type="Script" uid="uid://heduhodk2i1s" path="res://Inimigos/Carros/CarroInimigo.gd" id="1_dnr5i"]
+[ext_resource type="Texture2D" uid="uid://bgmos7v4ynr3h" path="res://Assets/kenney_pixel-vehicle-pack/PNG/Cars/ambulance.png" id="1_jh0fc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dnr5i"]
+size = Vector2(155, 83)
+
+[node name="Ambulancia" type="CharacterBody2D"]
+collision_layer = 10
+collision_mask = 0
+script = ExtResource("1_dnr5i")
+SPEED = 500.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("1_jh0fc")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, -0.5)
+shape = SubResource("RectangleShape2D_dnr5i")

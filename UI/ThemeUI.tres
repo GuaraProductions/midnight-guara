@@ -1,0 +1,26 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://c20h2o4t1q48g"]
+
+[ext_resource type="FontFile" uid="uid://chodu8v1s4yxy" path="res://Assets/kenney_ui-pack/Font/Kenney Future Narrow.ttf" id="1_e51bb"]
+[ext_resource type="Texture2D" uid="uid://c5bkhq8ww4iav" path="res://Assets/kenney_ui-pack/PNG/Green/Default/button_rectangle_gloss.png" id="2_vlwpa"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fdoac"]
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
+texture = ExtResource("2_vlwpa")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[resource]
+default_font = ExtResource("1_e51bb")
+default_font_size = 48
+Button/font_sizes/font_size = 56
+Button/fonts/font = ExtResource("1_e51bb")
+Button/styles/normal = SubResource("StyleBoxTexture_fdoac")
+MarginContainer/constants/margin_bottom = 55
+MarginContainer/constants/margin_left = 55
+MarginContainer/constants/margin_right = 55
+MarginContainer/constants/margin_top = 55

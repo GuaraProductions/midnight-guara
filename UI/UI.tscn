@@ -1,0 +1,361 @@
+[gd_scene load_steps=30 format=3 uid="uid://h5qp8mjik5dt"]
+
+[ext_resource type="Script" uid="uid://dukblq6vtvt42" path="res://UI/UI.gd" id="1_6dd3c"]
+[ext_resource type="Theme" uid="uid://c20h2o4t1q48g" path="res://UI/ThemeUI.tres" id="2_e707p"]
+[ext_resource type="FontFile" uid="uid://chodu8v1s4yxy" path="res://Assets/kenney_ui-pack/Font/Kenney Future Narrow.ttf" id="3_f1fl4"]
+[ext_resource type="Script" uid="uid://egioe1uipr5o" path="res://UI/MenuEscolhaCarros.gd" id="4_jqf55"]
+[ext_resource type="Script" uid="uid://bv7ai3b7w1jwx" path="res://Jogador/Carro.gd" id="5_byuxr"]
+[ext_resource type="Resource" uid="uid://bju1is8yyyepj" path="res://Jogador/carro_default.tres" id="7_d050y"]
+[ext_resource type="Texture2D" uid="uid://d4iayanja0617" path="res://Assets/kenney_pixel-vehicle-pack/PNG/Cars/suv_military.png" id="7_qgmx8"]
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="8_d050y"]
+[ext_resource type="Texture2D" uid="uid://ceytrj5m2jlbd" path="res://Assets/kenney_pixel-vehicle-pack/PNG/Cars/formula.png" id="8_vx7wu"]
+[ext_resource type="Texture2D" uid="uid://bb5qtvc1ajl5c" path="res://Assets/kenney_pixel-vehicle-pack/PNG/Cars/rounded_yellow.png" id="9_r2vy3"]
+[ext_resource type="Texture2D" uid="uid://4gkkstrtexkm" path="res://Assets/carro_do_ovo_v1/carro_do_ovo_v1.png" id="10_r2vy3"]
+[ext_resource type="Texture2D" uid="uid://g3vy4x7iqcbq" path="res://Assets/uno escada.png" id="11_017wa"]
+[ext_resource type="PackedScene" uid="uid://chmj6q6r4hilj" path="res://UI/CarroCard.tscn" id="11_qhxh2"]
+[ext_resource type="Texture2D" uid="uid://c5bkhq8ww4iav" path="res://Assets/kenney_ui-pack/PNG/Green/Default/button_rectangle_gloss.png" id="14_npmjx"]
+[ext_resource type="Texture2D" uid="uid://tkcaq12arx8h" path="res://Assets/kenney_ui-pack/PNG/Grey/Default/button_rectangle_depth_flat.png" id="15_6q2ik"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6dd3c"]
+font_size = 108
+outline_size = 25
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_dhe1o"]
+font_size = 125
+font_color = Color(1, 0.207843, 0.254902, 1)
+outline_size = 15
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d050y"]
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
+bg_color = Color(0.113725, 0.113725, 0.113725, 0.631373)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_byuxr"]
+font = ExtResource("3_f1fl4")
+font_size = 102
+
+[sub_resource type="Resource" id="Resource_r2vy3"]
+script = ExtResource("5_byuxr")
+nome = "Carro Verde"
+velocidade = 400.0
+rigidez = 0.99
+textura = ExtResource("7_qgmx8")
+preco = 0.0
+metadata/_custom_type_script = "uid://bv7ai3b7w1jwx"
+
+[sub_resource type="Resource" id="Resource_qhxh2"]
+script = ExtResource("5_byuxr")
+nome = "ferrai"
+velocidade = 600.0
+rigidez = 0.97
+textura = ExtResource("8_vx7wu")
+preco = 25.0
+metadata/_custom_type_script = "uid://bv7ai3b7w1jwx"
+
+[sub_resource type="Resource" id="Resource_017wa"]
+script = ExtResource("5_byuxr")
+nome = "Carro amarelo"
+velocidade = 450.0
+rigidez = 0.97
+textura = ExtResource("9_r2vy3")
+preco = 10.0
+metadata/_custom_type_script = "uid://bv7ai3b7w1jwx"
+
+[sub_resource type="Resource" id="Resource_npmjx"]
+script = ExtResource("5_byuxr")
+nome = "Carro do ovo"
+velocidade = 395.0
+rigidez = 0.97
+textura = ExtResource("10_r2vy3")
+preco = 50.0
+metadata/_custom_type_script = "uid://bv7ai3b7w1jwx"
+
+[sub_resource type="Resource" id="Resource_6q2ik"]
+script = ExtResource("5_byuxr")
+nome = "Uno escada"
+velocidade = 600.0
+rigidez = 0.99
+textura = ExtResource("11_017wa")
+preco = 30.0
+metadata/_custom_type_script = "uid://bv7ai3b7w1jwx"
+
+[sub_resource type="LabelSettings" id="LabelSettings_d050y"]
+font_size = 56
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fdoac"]
+content_margin_left = 15.0
+content_margin_top = 15.0
+content_margin_right = 15.0
+content_margin_bottom = 15.0
+texture = ExtResource("14_npmjx")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="Theme" id="Theme_6q2ik"]
+default_font = ExtResource("3_f1fl4")
+default_font_size = 56
+Button/font_sizes/font_size = 56
+Button/fonts/font = ExtResource("3_f1fl4")
+Button/styles/normal = SubResource("StyleBoxTexture_fdoac")
+Label/colors/font_color = Color(0, 0.72549, 0.94902, 1)
+MarginContainer/constants/margin_bottom = 55
+MarginContainer/constants/margin_left = 55
+MarginContainer/constants/margin_right = 55
+MarginContainer/constants/margin_top = 55
+
+[sub_resource type="LabelSettings" id="LabelSettings_t31p1"]
+font_size = 78
+font_color = Color(1, 1, 0.247059, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t31p1"]
+content_margin_left = 25.0
+content_margin_top = 25.0
+content_margin_right = 25.0
+content_margin_bottom = 25.0
+texture = ExtResource("15_6q2ik")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 8.0
+modulate_color = Color(0.377919, 0.377919, 0.377919, 1)
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_6dd3c")
+
+[node name="Placar" type="MarginContainer" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="PlacarLabel" type="Label" parent="Placar"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+label_settings = SubResource("LabelSettings_6dd3c")
+
+[node name="GameOver" type="MarginContainer" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_e707p")
+
+[node name="CenterContainer" type="CenterContainer" parent="GameOver"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="VBox" type="VBoxContainer" parent="GameOver/CenterContainer"]
+layout_mode = 2
+
+[node name="GameOverLabel" type="Label" parent="GameOver/CenterContainer/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_dhe1o")
+horizontal_alignment = 1
+
+[node name="PlacarFinal" type="Label" parent="GameOver/CenterContainer/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Placar"
+horizontal_alignment = 1
+
+[node name="HBox" type="HBoxContainer" parent="GameOver/CenterContainer/VBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 55
+
+[node name="Resetar" type="Button" parent="GameOver/CenterContainer/VBox/HBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Resetar
+"
+
+[node name="VoltarMenu" type="Button" parent="GameOver/CenterContainer/VBox/HBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Voltar 
+pro Menu"
+
+[node name="MenuPrincipal" type="MarginContainer" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_e707p")
+theme_override_constants/margin_top = 55
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuPrincipal"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="MenuPrincipal/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_d050y")
+text = "Midnight Guará"
+label_settings = SubResource("LabelSettings_byuxr")
+horizontal_alignment = 1
+
+[node name="Buttons" type="VBoxContainer" parent="MenuPrincipal/VBoxContainer"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 25
+
+[node name="Comecar" type="Button" parent="MenuPrincipal/VBoxContainer/Buttons"]
+layout_mode = 2
+text = "Começar"
+
+[node name="Creditos" type="Button" parent="MenuPrincipal/VBoxContainer/Buttons"]
+layout_mode = 2
+text = "Créditos"
+
+[node name="Sair" type="Button" parent="MenuPrincipal/VBoxContainer/Buttons"]
+layout_mode = 2
+text = "Sair"
+
+[node name="Escolha" type="MarginContainer" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_e707p")
+script = ExtResource("4_jqf55")
+carros = Array[ExtResource("5_byuxr")]([ExtResource("7_d050y"), SubResource("Resource_r2vy3"), SubResource("Resource_qhxh2"), SubResource("Resource_017wa"), SubResource("Resource_npmjx"), SubResource("Resource_6q2ik")])
+carro_card = ExtResource("11_qhxh2")
+
+[node name="Vbox" type="VBoxContainer" parent="Escolha"]
+layout_mode = 2
+theme_override_constants/separation = 45
+
+[node name="Label" type="Label" parent="Escolha/Vbox"]
+layout_mode = 2
+text = "Selecione uM CARro"
+label_settings = SubResource("LabelSettings_d050y")
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Escolha/Vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GridCarros" type="HFlowContainer" parent="Escolha/Vbox/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 25
+theme_override_constants/v_separation = 25
+alignment = 1
+
+[node name="DinheiroLabel" type="Label" parent="Escolha/Vbox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="Virtual Joystick" parent="." instance=ExtResource("8_d050y")]
+visible = false
+custom_minimum_size = Vector2(250, 250)
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+deadzone_size = 5.0
+joystick_mode = 1
+
+[node name="Creditos" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_6q2ik")
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Creditos"]
+layout_mode = 2
+theme_override_constants/separation = 56
+
+[node name="Label" type="Label" parent="Creditos/VBoxContainer"]
+layout_mode = 2
+text = "Créditos"
+label_settings = SubResource("LabelSettings_t31p1")
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Creditos/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="Creditos/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_styles/panel = SubResource("StyleBoxTexture_t31p1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Creditos/VBoxContainer/ScrollContainer/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Creditos/VBoxContainer/ScrollContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Programação"
+
+[node name="Label2" type="RichTextLabel" parent="Creditos/VBoxContainer/ScrollContainer/PanelContainer/VBoxContainer" groups=["RichTextComLink"]]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[url=https://www.youtube.com/@guaraprogramador]Guará Programador[/url]"
+fit_content = true
+
+[node name="Label3" type="Label" parent="Creditos/VBoxContainer/ScrollContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "design dos carros"
+
+[node name="Label4" type="RichTextLabel" parent="Creditos/VBoxContainer/ScrollContainer/PanelContainer/VBoxContainer" groups=["RichTextComLink"]]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[url=https://kenney.nl/assets/pixel-vehicle-pack]Kenney_pixel_vehicle_pack[/url]
+[url=https://github.com/ruandemeneses]Ruan de meneses[/url]
+G0rdo"
+fit_content = true
+
+[node name="Button" type="Button" parent="Creditos/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Voltar"
+
+[connection signal="pressed" from="GameOver/CenterContainer/VBox/HBox/Resetar" to="." method="_on_resetar_pressed"]
+[connection signal="pressed" from="GameOver/CenterContainer/VBox/HBox/VoltarMenu" to="." method="_on_voltar_menu_pressed"]
+[connection signal="pressed" from="MenuPrincipal/VBoxContainer/Buttons/Comecar" to="." method="_on_comecar_pressed"]
+[connection signal="pressed" from="MenuPrincipal/VBoxContainer/Buttons/Creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="MenuPrincipal/VBoxContainer/Buttons/Sair" to="." method="_on_sair_pressed"]
+[connection signal="pressed" from="Creditos/VBoxContainer/Button" to="." method="_on_button_pressed"]
