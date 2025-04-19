@@ -103,7 +103,7 @@ texture_margin_bottom = 4.0
 
 [sub_resource type="Theme" id="Theme_6q2ik"]
 default_font = ExtResource("3_f1fl4")
-default_font_size = 56
+default_font_size = 40
 Button/font_sizes/font_size = 56
 Button/fonts/font = ExtResource("3_f1fl4")
 Button/styles/normal = SubResource("StyleBoxTexture_fdoac")
@@ -330,7 +330,7 @@ text = "Programação"
 
 [node name="Label2" type="RichTextLabel" parent="Creditos/VBoxContainer/ScrollContainer/PanelContainer/VBoxContainer" groups=["RichTextComLink"]]
 layout_mode = 2
-theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
 text = "[url=https://www.youtube.com/@guaraprogramador]Guará Programador[/url]"
 fit_content = true
@@ -341,12 +341,23 @@ text = "design dos carros"
 
 [node name="Label4" type="RichTextLabel" parent="Creditos/VBoxContainer/ScrollContainer/PanelContainer/VBoxContainer" groups=["RichTextComLink"]]
 layout_mode = 2
-theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
 text = "[url=https://kenney.nl/assets/pixel-vehicle-pack]Kenney_pixel_vehicle_pack[/url]
 [url=https://kenney.nl/assets/ui-pack]kenney_ui_pack[/url]
 [url=https://github.com/ruandemeneses]Ruan de meneses[/url]
 G0rdo"
+fit_content = true
+
+[node name="Label5" type="Label" parent="Creditos/VBoxContainer/ScrollContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Plugins"
+
+[node name="Label6" type="RichTextLabel" parent="Creditos/VBoxContainer/ScrollContainer/PanelContainer/VBoxContainer" groups=["RichTextComLink"]]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[url=https://github.com/MarcoFazioRandom/Virtual-Joystick-Godot]Virtual joystick[/url]"
 fit_content = true
 
 [node name="Button" type="Button" parent="Creditos/VBoxContainer"]
