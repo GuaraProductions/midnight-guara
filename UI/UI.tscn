@@ -198,7 +198,6 @@ text = "Voltar
 pro Menu"
 
 [node name="MenuPrincipal" type="MarginContainer" parent="."]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -289,6 +288,7 @@ deadzone_size = 5.0
 joystick_mode = 1
 
 [node name="Creditos" type="MarginContainer" parent="."]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
