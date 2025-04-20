@@ -5,6 +5,7 @@ signal iniciar_jogo(carro : Carro)
 signal resetar_jogo()
 
 @onready var placar_label : Label = %PlacarLabel
+@onready var placar_container : MarginContainer = $Placar
 @onready var game_over_label = %GameOverLabel
 @onready var game_over = $GameOver
 @onready var menu_principal = $MenuPrincipal
@@ -30,6 +31,7 @@ func link_clicado(link: String) -> void:
 func mostrar_menu() -> void:
 	resetar_placar()
 	placar_final.visible = false
+	placar_container.visible = false
 	placar_label.visible = false
 	game_over_label.visible = false
 	escolha_carros.visible = false
@@ -50,6 +52,7 @@ func carro_selecionado(carro: Carro) -> void:
 	virtual_joystick.visible = true
 	escolha_carros.visible = false
 	placar_label.visible = true
+	placar_container.visible = true
 	iniciar_jogo.emit(carro)
 
 func atualizar_placar() -> void:
@@ -62,6 +65,7 @@ func _mostrar_game_over():
 	escolha_carros.atualizar_dinheiro(carteira.dinheiro)
 	
 	placar_label.visible = false
+	placar_container.visible = false
 	virtual_joystick.visible = false
 	game_over.visible = true
 	game_over_label.visible = true
